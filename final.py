@@ -1,7 +1,6 @@
 #! /usr/bin/python
 
 # Name: dafont.com Bulk Download Tool
-# Version: 0.3
 # Summary: A tool for downloading top 20 fonts of each sub-category of dafont.com
 # License: BSD
 # Author: Pranav Ashok
