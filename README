@@ -1,0 +1,38 @@
+Summary
+-------
+
+Download fonts directly off a top 20 list of fonts from dafont.com, for 
+each sub-category available there.
+
+You can just change the ID range in the script to download fonts of 
+different category.
+
+
+Dependencies
+------------
+
+This script has used python library called 
+BeautifulSoup (http://www.crummy.com/software/BeautifulSoup) for parsing 
+HTML. If you are a developer, I’d recommend you to try BeautifulSoup. 
+It’s got a nice documentation and it’s easy to use.
+
+
+Usage
+-----
+
+1. Clone dafont-dl
+2. Open terminal and navigate to the folder where final.py is located.
+3. Execute the command (Use python2.7 and not python3)
+	$ python final.py
+4. A file called downloader.sh would have been generated in the folder.
+5. Copy it to the place where you want the fonts to be downloaded.
+6. Navigate to that folder in terminal and run the command
+	$ sh downloader.sh
+7. You’ll have a neatly organized collection of fonts. All you gotta do 
+now is extract them from their archives.
+
+
+Help
+----
+
+http://pranavashok.com/blog/2010/05/script-to-download-fonts-in-bulk-from-dafont-com/
