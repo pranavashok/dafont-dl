@@ -16,7 +16,7 @@ import commands
 import string
 
 for cat in range(101, 119): #ID Range 101-119
-	url = 'http://www.dafont.com/theme.php?cat=%d&nb_ppp=20' % cat
+	url = 'https://www.dafont.com/theme.php?cat=%d&nb_ppp=20' % cat
 	contents = commands.getoutput("curl -s '"+url+"'")
 
 	w = open('downloader.sh', 'a')
@@ -33,10 +33,10 @@ for cat in range(101, 119): #ID Range 101-119
 	w.write('mkdir \"%s\"\n' % subCat)
 	w.write('cd \"%s\"\n' % subCat)
 	for link in wholeTag:
-		name = os.path.basename(link['href'])
+		name = os.path.basename(''.join(['https:', link['href']]))
 		fileName, fileExt = os.path.splitext(name)
 		fileName = string.lstrip(fileName, "?f=")
-		w.write('wget -c -O \"%s.zip\" \"%s\" \n' % (fileName, link['href']))
+		w.write('wget -c -O \"%s.zip\" \"%s\"\n' % (fileName, ''.join(['https:', link['href']])))
 	w.write('cd ..\n')
 	w.write('cd ..\n')
 	w.close()
